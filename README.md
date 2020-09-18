@@ -12,7 +12,7 @@ By the end of this lab, you will be able to:
 
 #### Pre-requisites:
 Prior to undertaking this lab, you should have a basic grasp of the following topics:
-- YAML files (you can also use JSON with AWS CloudFormation, but the examples in this lab use YAML -- you can try [this site](https://www.json2yaml.com/convert-yaml-to-json) convert YAML to JSON  but I cannot guarantee functionality)
+- YAML files (you can also use JSON with AWS CloudFormation, but the examples in this lab use YAML -- you can try [this site](https://www.json2yaml.com/convert-yaml-to-json) to convert YAML to JSON  but I cannot guarantee functionality)
 - Powershell or similar scripting environment
 You will also need to possess the following:
 - An AWS account (freely available here: www.aws.amazon.com )
@@ -27,7 +27,7 @@ While there are obviously many ways to approach this type of issue, for the sake
 # Task 1:  Create a stack of S3 buckets using a CloudFormation template
 In this task, you will create a simple stack using a provided Cloudformation template.  
 1. Download the file S3TwobucketCloudFormationTemplate.yml associated with this repository to your computer
-2. In the **AWS Management Console**, on the ![Services button]() menu, select **CloudFormation**
+2. In the **AWS Management Console**, on the ![Services button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/AWS-Services.jpg) menu, select **CloudFormation**
 3. Select the ![Create stack button]()
 4. Perform the following on the screen:
 - Select ![Template is ready]()
