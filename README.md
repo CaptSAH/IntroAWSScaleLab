@@ -94,7 +94,7 @@ aws cloudformation delete-stack --stack-name seconddoublestack
    Reminder if necessary: In the **AWS Management Console**, on the ![Services button]() menu, select **S3**
    All buckets associated with the stack should be gone.  Similarly, if you navigate to the CloudFormation service, there should be no trace of the "seconddoublestack" you just deleted.  
    
-## Scenario Recap
+### Scenario Update
 Remember that in our hypothetical scenario, you need to provision multiple objects for multiple teams.  We've now seen how with the AWS CloudFormation service using templates, you can create and delete multiple objects at one time.  Using the AWS CLI allowed you to reduce it to a single command rather than clicking though a user interface.  Now we just need a way to scale out what we've already shown can be done for one team.  You could just create a very large template file with all the details for all the teams, but that would be a headache to maintain, and it could be difficult to later remove or add single teams.  Another option would be to re-use the base template, naming the stacks so that each stack was readily identifiable with each team.  However, even then the underlying S3 buckets associated with each "team" would still have very similar random names, and be difficult to identify outside of their stacks. So let's combine the concept of repeatedly creating stacks with different names, but also use the parameters functionality of CloudFormation to repeatedly customize the execution.
 
 # Task 4: Use parameters to customize template execution
