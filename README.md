@@ -98,7 +98,7 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 ```
 aws cloudformation create-stack --stack-name seconddoublestack --template-body <path to the S3TwobucketCloudFormationTemplate.yml file>
 ```
-3. Examine the contets of your S3 space in the **AWS Management Console**
+3. Examine the contents of your S3 space in the **AWS Management Console**
    (Reminder if necessary: In the **AWS Management Console**, on the ![Services button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/AWS-Services.jpg) menu, select **S3**)
    
    You should now see only two buckets, corresponding to the "Internal" and "ForWeb" buckets specified by the template.  When using the AWS CLI, that extra templates bucket is not created.
