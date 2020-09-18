@@ -55,7 +55,7 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 ![Initial Three Buckets](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/InitialThreeBuckets.jpg)
    To understand how these were created, let's examine the template.  You can either open the template file on your own computer, or you can navigate back to the CloudFormation screen and select your stack that was just created.  Once there, you can find the **Template** tab near the upper right portion of the screen.
    The key part of the template for now is this top section:
-```
+```yml
  Resources:
   S3BucketForWeb:
     Type: AWS::S3::Bucket
