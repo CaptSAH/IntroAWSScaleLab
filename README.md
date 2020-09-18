@@ -148,8 +148,9 @@ Parameters:
         - - !Ref TeamNameParameter
           - '-labdemointernalbucket'
 ```
-   Just as before, for the Internal bucket we're going to specify a name based upon the parameter to be given at runtime.  Now both of the S3 buckets created by this template should have custom names determined at runtime.  
-   If you wish to use it, a version of the template already updated as described in the previous steps is available here in this repository as S3TwobucketwithParameters.yml
+   Just as before, for the Internal bucket we're going to specify a name based upon the parameter to be given at runtime.  Now both of the S3 buckets created by this template should have custom names determined at runtime.
+   
+   :point_right:If you wish to use it, a version of the template already updated as described in the previous steps is available here in this repository as S3TwobucketwithParameters.yml
    
 5. From your command prompt, run the command
 ```
