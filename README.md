@@ -92,6 +92,7 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 9. Verify that no buckets related to the stack exist
 
 # Task 3: Use the AWS CLI to create a stack
+In this task, you will use the AWS CLI instead of the web interface to instigate stack creation.
 1. Open a command prompt (or powershell, linux shell, etc.) on your local machine to use the AWS CLI
 
 2. Run the command 
@@ -117,6 +118,7 @@ aws cloudformation delete-stack --stack-name seconddoublestack
 Remember that in our hypothetical scenario, you need to provision multiple objects for multiple teams.  We've now seen how with the AWS CloudFormation service using templates, you can create and delete multiple objects at one time.  Using the AWS CLI allowed you to reduce it to a single command rather than clicking though a user interface.  Now we just need a way to scale out what we've already shown can be done for one team.  You could just create a very large template file with all the details for all the teams, but that would be a headache to maintain, and it could be difficult to later remove or add single teams.  Another option would be to re-use the base template, naming the stacks so that each stack was readily identifiable with each team.  However, even then the underlying S3 buckets associated with each "team" would still have very similar random names, and be difficult to identify outside of their stacks. So let's combine the concept of repeatedly creating stacks with different names, but also use the parameters functionality of CloudFormation to repeatedly customize the execution.
 
 # Task 4: Use parameters to customize template execution
+In this task, you will add a parameter to the template that will allow customization at runtime.
 1. Create a copy of the S3TwobucketCloudFormationTemplate.yml file with a different name.  *Use this new template file for the rest of the lab*.
 
 2. Add the following to the top of the new template file (just under the "---" header at the very top):
@@ -172,6 +174,7 @@ aws cloudformation delete-stack --stack-name wildcats
    :muscle: *BONUS challenge* - This task used only the CLI, but you can use the web interface and manually upload the exact same template with parameters.  Find where the TeamNameParameter would be specified in the web interface.
 
 # Task 5: Use shell variables to execute multiple stacks with one call
+In this task, you will put it all together by creating multiple custom stacks with a single executable.
 1. Create a shell script in the language of your choice to incorporate the aws cloudformation create-stack call into a loop that could be repeated for a series of team names - lions, tigers, bears, and turtles
 
    Here is a powershell example:
