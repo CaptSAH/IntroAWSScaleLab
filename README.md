@@ -84,7 +84,8 @@ aws cloudformation create-stack --stack-name seconddoublestack --template-body <
 ```
 3. Examine the contets of your S3 space in the **AWS Management Console**
    Reminder if necessary: In the **AWS Management Console**, on the ![Services button]() menu, select **S3**
-   You should now see only two buckets, corresponding to the "Internal" and "ForWeb" buckets specified by the template.  When using the AWS CLI, that extra templates bucket is not created.  
+   You should now see only two buckets, corresponding to the "Internal" and "ForWeb" buckets specified by the template.  When using the AWS CLI, that extra templates bucket is not created.
+   
    :muscle: *BONUS challenge* - Are there other differences in outcomes when using the CLI vs the web interface?  See if you can still find the same information about your created stack after having used the CLI
 4. From your command prompt, run the command
 ```
