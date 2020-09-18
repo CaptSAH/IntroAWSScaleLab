@@ -36,7 +36,7 @@ In this task, you will create a simple stack using a provided Cloudformation tem
 - Click ![Next]()
 5. Enter a valid stack name (i.e. "myfirstdoublestack") and click ![Next]()  You may ignore the "Parameters" section.
 6. Click ![Next]() (you may have to scroll down) Again, ignore the other settings available here for now.
-7. Click ![Create stack button]()
+7. Click ![Create stack button]() (again you may have to scroll down to find it)
 AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  Note that you may have to refresh the screen once the operations have completed.
 ![First Stack Completed Screen]()
 
@@ -46,6 +46,21 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 2. You should see three buckets similar to this.  
 ![Initial Three Buckets]()
    To understand how these were created, let's examine the template.  You can either open the template file on your own computer, or you can navigate back to the CloudFormation screen and select your stack that was just created.  Once there, you can find the **Template** tab near the upper right portion of the screen.
+   The key part of the template for now is this top section:
+   '''
+   Resources:
+  S3BucketForWeb:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+  S3BucketInternal:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+    '''
    
 
 
