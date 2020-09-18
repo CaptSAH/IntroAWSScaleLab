@@ -1,0 +1,45 @@
+---
+Parameters:
+  TeamNameParameter:
+    Type: String
+    Description: The name to designate for each bucketpair
+    Default: team1
+    AllowedPattern: '[a-z0-9]+'
+Resources:
+  S3BucketForWeb:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: 
+        Fn::Join:
+        - ''
+        - - !Ref TeamNameParameter
+          - '-labdemowebbucket'
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+  S3BucketInternal:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: 
+        Fn::Join:
+        - ''
+        - - !Ref TeamNameParameter
+          - '-labdemointernalbucket'
+      AccessControl: Private
+Outputs:
+  WebsiteURL:
+    Value:
+      Fn::GetAtt:
+      - S3BucketForWeb
+      - WebsiteURL
+    Description: URL for website hosted on S3
+  S3BucketSecureURL:
+    Value:
+      Fn::Join:
+      - ''
+      - - https://
+        - Fn::GetAtt:
+          - S3BucketForWeb
+          - DomainName
+    Description: Name of S3 bucket to hold website content
