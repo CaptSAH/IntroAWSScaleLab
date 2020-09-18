@@ -25,15 +25,28 @@ While there are obviously many ways to approach this type of issue, for the sake
 Insert start lab instructions here
 
 # Task 1:  Create a stack of S3 buckets using a CloudFormation template
-In this task, you will create a simple stack using a provided Cloudformation template
+In this task, you will create a simple stack using a provided Cloudformation template.  
 1. Download the file S3TwobucketCloudFormationTemplate.yml associated with this repository to your computer
-2. In the **AWS Management Console**, on the ![Services button] () menu, select **CloudFormation**
-3. Select the ![Create stack button] ()
-4. Select the following:
-- ![Template is ready]()
-- ![Upload a template file]()
-- ![Choose file]() and select the S3TwobucketCloudFormationTemplate.yml file
-- ![Next]()
+2. In the **AWS Management Console**, on the ![Services button]() menu, select **CloudFormation**
+3. Select the ![Create stack button]()
+4. Perform the following on the screen:
+- Select ![Template is ready]()
+- Select ![Upload a template file]()
+- Select ![Choose file]() and select the S3TwobucketCloudFormationTemplate.yml file
+- Click ![Next]()
+5. Enter a valid stack name (i.e. "myfirstdoublestack") and click ![Next]()  You may ignore the "Parameters" section.
+6. Click ![Next]() (you may have to scroll down) Again, ignore the other settings available here for now.
+7. Click ![Create stack button]()
+AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  Note that you may have to refresh the screen once the operations have completed.
+![First Stack Completed Screen]()
+
+# Task 2: Examine the Objects created and compare to the template
+In this task, you will find the S3 buckets created with the stack and analyze the template to understand how they were created.
+1. In the **AWS Management Console**, on the ![Services button]() menu, select **S3**
+2. You should see three buckets similar to this.  
+![Initial Three Buckets]()
+   To understand how these were created, let's examine the template.  You can either open the template file on your own computer, or you can navigate back to the CloudFormation screen and select your stack that was just created.  Once there, you can find the **Template** tab near the upper right portion of the screen.
+   
 
 
    Note:  AWS CloudFormation also accepts JSON templates.  If you prefer JSON, you can use this site to convert YAML to JSON https://www.json2yaml.com/convert-yaml-to-json 
