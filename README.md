@@ -19,13 +19,26 @@ Prior to undertaking this lab, you should have a basic grasp of the following to
 # Scenario
 You are responsible for managing IT resources for a number of stakeholders.  One of them comes to you with the following request:  They want you to provide IT structure for a league of sports teams.  Each team will need its own private storage space, as well as a public space for hosting web content.  This league is constantly changing, and they need the ability to add or remove any number of teams from the infrastructure without disrupting the whole plan.  
 
-While there are obviously many ways to approach this type of issue, for the sake of this lab exercise we're going to focus on using AWS CloudFormation along with the AWS CLI to show how such deployments can be easily handled.  In the real scenario, there would be a need for coordinating several functions, but again for simplicity we're just going to focus on providing storage space for each team using AWS S3 buckets.  You need to create two S3 buckets for each "team", one private and one public.  Then you need the ability to easily create or delete multiple sets of these buckets.
+While there are obviously many ways to approach this type of issue, for the sake of this lab exercise we're going to focus on using AWS CloudFormation along with the AWS CLI to show how such deployments can be easily handled.  In the real scenario, there would be a need for coordinating several functions, but again for simplicity we're just going to focus on providing storage space for each team using AWS S3 buckets.  **You need to create two S3 buckets for each "team", one private and one public.  Then you need the ability to easily create or delete multiple sets of these buckets.**
 
 # Start Lab
 Insert start lab instructions here
 
 # Task 1:  Create a stack of S3 buckets using a CloudFormation template
 In this task, you will create a simple stack using a provided Cloudformation template
+1. Download the file S3TwobucketCloudFormationTemplate.yml associated with this repository to your computer
+2. In the **AWS Management Console**, on the ![Services button] () menu, select **CloudFormation**
+3. Select the ![Create stack button] ()
+4. Select the following:
+- ![Template is ready]()
+- ![Upload a template file]()
+- ![Choose file]() and select the S3TwobucketCloudFormationTemplate.yml file
+- ![Next]()
+
+
+   Note:  AWS CloudFormation also accepts JSON templates.  If you prefer JSON, you can use this site to convert YAML to JSON https://www.json2yaml.com/convert-yaml-to-json 
+  There are hundreds of sample templates to examine here: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html
+  
 Task 2:  Create the stack using the AWS CLI
 Task 3:  Modify the template to incorporate "parameters" for each stack 
 Task 4:  Create multiple unique but similar stacks using AWS CLI and a template
