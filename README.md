@@ -120,7 +120,7 @@ Remember that in our hypothetical scenario, you need to provision multiple objec
 1. Create a copy of the S3TwobucketCloudFormationTemplate.yml file with a different name.  *Use this new template file for the rest of the lab*.
 
 2. Add the following to the top of the new template file (just under the "---" header at the very top):
-```
+```yml
 Parameters:
   TeamNameParameter:
     Type: String
@@ -131,7 +131,7 @@ Parameters:
    This indicates a parameter named "TeamNameParameter" that will need to be input at runtime.  We can then reference this parameter elsewhere in the template for object details that we want to change for each execution.  In this example, we will insert the parameter to specify the names of the S3 buckets we create so that they can be easily recognized as belonging to a particular team's stack.
    
 3.  Add the following to the S3BucketForWeb "Properties" section:
-```
+```yml
       BucketName: 
         Fn::Join:
         - ''
@@ -141,7 +141,7 @@ Parameters:
    The "!Ref" tells the system that rather than using a set string value, it should reference the value of the specified parameter.  The "Fn::Join:" function concatenates the value of the TeamNameParameter with "-labdemowebbucket".  For example, if at runtime I enter the value of the TeamNameParameter as "wildcats", the resulting bucket name should be "wildcats-labdemowebbucket".
    
 4. Add the following to the S3BucketInternal "Properties" section and save the file:
-```
+```yml
       BucketName: 
         Fn::Join:
         - ''
