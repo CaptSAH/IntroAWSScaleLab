@@ -12,7 +12,7 @@ By the end of this lab, you will be able to:
 
 #### Pre-requisites:
 Prior to undertaking this lab, you should have a basic grasp of the following topics:
-- YAML files (you can also use JSON with AWS CloudFormation, but the examples in this lab use YAML -- you can try this site to convert YAML to JSON [Link](https://www.json2yaml.com/convert-yaml-to-json but I cannot guarantee functionality))
+- YAML files (you can also use JSON with AWS CloudFormation, but the examples in this lab use YAML -- you can try this site to convert YAML to JSON [Link](https://www.json2yaml.com/convert-yaml-to-json) but I cannot guarantee functionality)
 - Powershell or similar scripting environment
 You will also need to possess the following:
 - An AWS account (freely available here: www.aws.amazon.com )
