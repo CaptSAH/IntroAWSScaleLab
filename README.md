@@ -44,7 +44,7 @@ In this task, you will create a simple stack using a provided Cloudformation tem
 6. Click ![Next](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Next.jpg) (you may have to scroll down) Again, ignore the other settings available here for now.
 
 7. Click ![Create stack button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Create-stack.jpg) (again you may have to scroll down to find it)
-AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  *Note that you may have to refresh the screen once the operations have completed. Also note that there are separate refresh buttons for the stack and the resources*
+AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  *Note that you may have to refresh the screen once the operations have completed. Also note that there are separate refresh buttons for the stack and the events*
 ![First Stack Completed Screen](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/FirstStackCompletedScreen.jpg)
 
 # Task 2: Examine the Objects created and compare to the template
