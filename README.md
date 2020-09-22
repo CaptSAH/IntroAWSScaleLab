@@ -44,7 +44,7 @@ In this task, you will create a simple stack using a provided Cloudformation tem
 6. Click ![Next](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Next.jpg) (you may have to scroll down) Again, ignore the other settings available here for now.
 
 7. Click ![Create stack button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Create-stack.jpg) (again you may have to scroll down to find it)
-AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  Note that you may have to refresh the screen once the operations have completed.
+AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  *Note that you may have to refresh the screen once the operations have completed. Also note that there are separate refresh buttons for the stack and the resources*
 ![First Stack Completed Screen](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/FirstStackCompletedScreen.jpg)
 
 # Task 2: Examine the Objects created and compare to the template
@@ -86,8 +86,7 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 7. Examine the existing bucket. You should now only have one bucket, the one used to hold the stack template.
    The stack deleted the two buckets associated with it, but the system did not automatically delete the bucket used for the template.  Note that with CloudFormation stacks, you can easily create and delete multiple objects at one time.
    
-8. Select the remaining bucket and click ![Delete button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Deletebutton.jpg) to delete the remaining bucket
-   Confirm by entering the name and clicking the Confirm button
+8. Select the remaining bucket and click ![Delete button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/Deletebutton.jpg) to delete the remaining bucket. Confirm by entering the name of the bucket and clicking the Confirm button
    
 9. Verify that no buckets related to the stack exist
 
@@ -99,6 +98,7 @@ In this task, you will use the AWS CLI instead of the web interface to instigate
 ```
 aws cloudformation create-stack --stack-name seconddoublestack --template-body <path to the S3TwobucketCloudFormationTemplate.yml file>
 ```
+  A successful execution should return a StackID string to the screen.
 3. Examine the contents of your S3 space in the **AWS Management Console**
    (Reminder if necessary: In the **AWS Management Console**, on the ![Services button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/AWS-Services.jpg) menu, select **S3**)
    
@@ -193,7 +193,7 @@ aws cloudformation create-stack --stack-name $team"labdemostack" --template-body
 4. Verify that you have four stacks, one for each "team" in your script.
    You can also select various stacks and confirm that each stack's associated S3 resources have matching team names for easy identification.
    
-5. Examine the contets of your S3 space in the **AWS Management Console**
+5. Examine the contents of your S3 space in the **AWS Management Console**
    Reminder if necessary: In the **AWS Management Console**, on the ![Services button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/AWS-Services.jpg) menu, select **S3**
    
    Here there are now eight buckets, two for each team, created by a single script
