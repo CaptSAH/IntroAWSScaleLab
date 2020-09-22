@@ -211,5 +211,6 @@ For further exercise, you might consider adding more parameters, perhaps one to 
 
 ## Additional Resources
 - [Sample Cloud Formation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html)
+- [AWS Documentation](https://docs.aws.amazon.com/index.html)
   
 
