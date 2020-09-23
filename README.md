@@ -17,7 +17,7 @@ Prior to undertaking this lab, you should have a basic grasp of the following to
 
 You will also need to possess the following:
 - An AWS account (freely available here: www.aws.amazon.com )
-- The latest version of the AWS Cli installed on your system ( [Link](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) )
+- The latest version of the AWS CLI installed on your system ( [Link](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) )
 
 # Scenario
 You are responsible for managing IT resources for a number of stakeholders.  One of them comes to you with the following request:  They want you to provide IT structure for a league of sports teams.  Each team will need its own private storage space, as well as a public space for hosting web content.  This league is constantly changing, and they need the ability to add or remove any number of teams from the infrastructure without disrupting the whole plan.  
@@ -94,7 +94,7 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 In this task, you will use the AWS CLI instead of the web interface to instigate stack creation.
 1. Open a command prompt (or powershell, linux shell, etc.) on your local machine to use the AWS CLI
 
-2. Run the command 
+2. Run the command below (note that you replace the section within the <> below with the actual path to the yml file on your system)
 ```
 aws cloudformation create-stack --stack-name seconddoublestack --template-body <path to the S3TwobucketCloudFormationTemplate.yml file>
 ```
@@ -175,7 +175,7 @@ aws cloudformation delete-stack --stack-name wildcats
 
 # Task 5: Use shell variables to execute multiple stacks with one call
 In this task, you will put it all together by creating multiple custom stacks with a single executable.
-1. Create a shell script in the language of your choice to incorporate the aws cloudformation create-stack call into a loop that could be repeated for a series of team names - lions, tigers, bears, and turtles
+1. Create a shell script in the language of your choice to incorporate the AWS CloudFormation create-stack call into a loop that could be repeated for a series of team names - lions, tigers, bears, and turtles
 
    Here is a powershell example:
 ```powershell
@@ -210,7 +210,7 @@ In terms of our scenario, you now possess the capability to rapidly deploy as ma
 For further exercise, you might consider adding more parameters, perhaps one to host each team's buckets in their specific region.  Eventually you can expand upon this to incorporate additional AWS services into your stacks that would normally be included in such as deployment, such as EC2 instances.
 
 ## Additional Resources
-- [Sample Cloud Formation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html)
+- [Sample CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html)
 - [AWS Documentation](https://docs.aws.amazon.com/index.html)
   
 
