@@ -96,7 +96,7 @@ In this task, you will use the AWS CLI instead of the web interface to instigate
 
 2. Run the command below
 
-Note: Be sure to replace the <path to the...> section of the command with the actual path to your yml file. Something like.. file://S3TwobucketCloudFormationTemplate.yml 
+Note: For this and subsequent sample commands, be sure to use the actual path to your yml file in place of the text and \<\> brackets. Something like.. file://S3TwobucketCloudFormationTemplate.yml 
    
 ```
 aws cloudformation create-stack --stack-name seconddoublestack --template-body <path to the S3TwobucketCloudFormationTemplate.yml file>
