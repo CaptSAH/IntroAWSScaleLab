@@ -94,7 +94,10 @@ In this task, you will find the S3 buckets created with the stack and analyze th
 In this task, you will use the AWS CLI instead of the web interface to instigate stack creation.
 1. Open a command prompt (or powershell, linux shell, etc.) on your local machine to use the AWS CLI
 
-2. Run the command below (note that you replace the section within the <> below with the actual path to the yml file on your system)
+2. Run the command below
+
+Note: Be sure to replace the <path to the...> section of the command with the actual path to your yml file. Something like.. file://S3TwobucketCloudFormationTemplate.yml 
+   
 ```
 aws cloudformation create-stack --stack-name seconddoublestack --template-body <path to the S3TwobucketCloudFormationTemplate.yml file>
 ```
