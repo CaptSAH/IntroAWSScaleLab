@@ -47,7 +47,7 @@ In this task, you will create a simple stack using a provided Cloudformation tem
 AWS will then create the stack of resources defined in the template.  You should see an update screen similar to this below.  *Note that you may have to refresh the screen once the operations have completed. Also note that there are separate refresh buttons for the stack and the events*
 ![First Stack Completed Screen](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/FirstStackCompletedScreen.jpg)
 
-# Task 2: Examine the Resources created and compare to the template
+# Task 2: Examine the resources created and compare to the template
 In this task, you will find the S3 buckets created with the stack and analyze the template to understand how they were created.
 1. In the **AWS Management Console**, on the ![Services button](https://github.com/CaptSAH/IntroAWSScaleLab/blob/master/Images/AWS-Services.jpg) menu, select **S3**
 
