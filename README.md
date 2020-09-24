@@ -3,6 +3,8 @@
 ## Overview
 This lab walks you through a simple way to leverage the power of AWS CloudFormation and the AWS CLI to easily and rapidly scale AWS deployments.  You will start with a simple CloudFormation template, use the cli to rapidly implement the template, then explore ways to integrate some simple scripting methodologies with CloudFormation template parameters to scale out the deployment.
 
+### Expected time to complete: 30 minutes
+
 ### Topics Covered
 By the end of this lab, you will be able to:
 - Create a stack of S3 buckets using a CloudFormation template
